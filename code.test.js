@@ -103,4 +103,4 @@ assert(JSON.stringify(dijkstra(ferrisWheel, 0)) == JSON.stringify([0,3,4,5,7,1,1
 assert(JSON.stringify(dijkstra(ferrisWheel, 5)) == JSON.stringify([8,4,12,13,15,0,1]));
 assert(JSON.stringify(dijkstra(house, 1)) == JSON.stringify([12,0,10,3,3,6,1]));
 assert(JSON.stringify(dijkstra(house, 5)) == JSON.stringify([6,7,4,10,4,0,8]));
-assert(JSON.stringify(dijkstra(houseExtra, 1)) == JSON.stringify([12,0,10,3,3,6,1,Infinity]));
+assert(JSON.stringify(dijkstra(houseExtra, 1)) == JSON.stringify([12,0,10,3,3,6,1,Number.MAX_VALUE]));
