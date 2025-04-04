@@ -24,8 +24,7 @@ inefficient.
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
-My implementation has the beginning for loop, assigning the starting distance values of all vertices to infinity, which would be a runtime of |V|. Then we have another for loop to iterate through every vertex again, but this one contains two other for loops, one to find the minimum distance and one to iterate through that vertex's connected vertices. This would run in |V|(|V| + |V|) time, so $|V|^2 + |V|^2$. Therefore the total runtime of the program would be $|V| + 2|V|^2$ or $\Theta(|V|^2)$, the fastest growing portion disregarding constants. 
-
+My implementation has the beginning for loop, assigning the starting distance values of all vertices to infinity, which would be a runtime of |V|. Then we have another for loop to iterate through every vertex again, but this one contains two other for loops, one to find the minimum distance and one to iterate through that vertex's connected vertices. Because the loop to determine the minimum distance checks that each node is not in the visited array, the runtime would be |V| * |V|. Therefore the total runtime would be |V|(|V|^2 + |V|) time, so $|V|^3 + |V|^2$. Therefore the total runtime of the program would be $|V| + |V|^3 + |V|^2$ or $\Theta(|V|^3)$. 
 ### Sources and Plagiarism 
 
 https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/
